@@ -1,0 +1,13 @@
+name: hindsight-sanitize
+kind: standalone
+version: 0.1.0
+description: |
+  Strip multimodal blobs (image/audio data URLs, base64 attachments) from
+  the content passed to Hindsight retain. Replaces each non-text content
+  part with a one-line placeholder (type + size hint) so the bank stays
+  small and embeddings stay clean.
+
+  Implementation: wraps HindsightMemoryProvider._build_turn_messages at
+  plugin register() time. No upstream files edited.
+author: nnnet/AiManager
+repo: https://github.com/nnnet/hermes-plugin-hindsight-sanitize
